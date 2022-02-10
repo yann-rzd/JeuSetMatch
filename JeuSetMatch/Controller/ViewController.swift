@@ -13,11 +13,17 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet var player1SetScoreLabels: [UILabel]!
     @IBOutlet var player2SetScoreLabels: [UILabel]!
-    lazy var playerSetScoreLabels: [Player: [UILabel]] = [Player.one: player1SetScoreLabels, Player.two: player2SetScoreLabels]
+    lazy var playerSetScoreLabels: [Player: [UILabel]] = [
+        Player.one: player1SetScoreLabels,
+        Player.two: player2SetScoreLabels
+    ]
 
     @IBOutlet weak var player1GameScoreLabel: UILabel!
     @IBOutlet weak var player2GameScoreLabel: UILabel!
-    lazy var playerGameScoreLabels: [Player: UILabel] = [Player.one: player1GameScoreLabel, Player.two: player2GameScoreLabel]
+    lazy var playerGameScoreLabels: [Player: UILabel] = [
+        Player.one: player1GameScoreLabel,
+        Player.two: player2GameScoreLabel
+    ]
 
     @IBOutlet weak var infoLabel: UILabel!
 
