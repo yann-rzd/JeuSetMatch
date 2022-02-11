@@ -43,4 +43,20 @@ class SetTestCase: XCTestCase {
         XCTAssertEqual(set.winner, .one)
         XCTAssertEqual(set.isOver, true)
     }
+
+    func testGivenScoreIs6To5_WhenGettingWinner_ThenNoWinnerAndSetIsNotOver() {
+        createManyGames(6, wonByPlayer: .one)
+        createManyGames(5, wonByPlayer: .two)
+
+        XCTAssertNil(set.winner)
+        XCTAssertFalse(set.isOver)
+    }
+
+    func testGivenScoreIs7To6_WhenGettingWinner_ThenPlayer1IsWinner() {
+        createManyGames(7, wonByPlayer: .one)
+        createManyGames(6, wonByPlayer: .two)
+
+        XCTAssertEqual(set.winner, .one)
+        XCTAssertTrue(set.isOver)
+    }
 }

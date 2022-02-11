@@ -35,7 +35,7 @@ class Game {
         }
     }
 
-    private func end(withWinner winner: Player) {
+    func end(withWinner winner: Player) {
         self.winner = winner
     }
 }
